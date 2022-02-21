@@ -5,7 +5,7 @@ WLD=wasm-ld
 clean:
 	rm -f add.ll
 	rm -f add.o
-	rm -f ad.wasm
+	rm -f add.wasm
 build:
 	$(CC) \
 		--target=wasm32 \
@@ -22,3 +22,6 @@ build:
 		--export-all \
 		-o add.wasm \
 		add.o
+	rm -f add.ll
+	rm -f add.o
+
